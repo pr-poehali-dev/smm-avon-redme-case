@@ -211,9 +211,9 @@ const Index = () => {
                   <p className="text-2xl font-semibold">25 ноября — 10 декабря</p>
                   <p className="text-lg text-muted-foreground mt-2">2021 года</p>
                 </div>
-              </Card>
+              </div>
             </div>
-          </div>
+          </Card>
         </div>
 
         {/* Card 4: Project Details */}
