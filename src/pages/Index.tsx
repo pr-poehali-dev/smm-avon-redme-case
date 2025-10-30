@@ -197,19 +197,70 @@ const Index = () => {
             visibleCards.includes(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <Card className="p-16 bg-white border-0 rounded-3xl shadow-lg h-[1296px] flex flex-col">
-            <h2 className="text-5xl font-bold mb-12">Задача</h2>
-            <p className="text-2xl leading-relaxed text-foreground mb-16">
-              Во время пандемии обострилась проблема домашнего насилия. Команда Avon решила рассказать женщинам о признаках абьюза, научить распознавать его на ранних стадиях отношений и реагировать на его проявления.
-            </p>
+          <Card className="p-16 bg-[#EFF2F8] border-0 rounded-3xl shadow-lg h-[1296px] flex gap-12">
+            {/* Left side: Text content */}
+            <div className="flex-1 flex flex-col justify-between">
+              <div>
+                <h2 className="text-5xl font-bold mb-8">Задача</h2>
+                <p className="text-xl leading-relaxed text-foreground">
+                  Во время пандемии обострилась проблема домашнего насилия. Команда Avon решила рассказать женщинам о признаках абьюза, научить распознавать его на ранних стадиях отношений и реагировать на его проявления.
+                </p>
+              </div>
 
-            <div className="mt-auto">
-              <h2 className="text-5xl font-bold mb-8">Период</h2>
-              <div className="p-12 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-3xl">
-                <div className="text-center">
-                  <Icon name="Calendar" size={64} className="mx-auto mb-6 text-primary" />
-                  <p className="text-2xl font-semibold">25 ноября — 10 декабря</p>
-                  <p className="text-lg text-muted-foreground mt-2">2021 года</p>
+              <div>
+                <h2 className="text-5xl font-bold mb-8">Период</h2>
+                <p className="text-xl leading-relaxed text-foreground">
+                  С 25 ноября по 10 декабря 2021 года.
+                </p>
+              </div>
+            </div>
+
+            {/* Right side: Chat interface illustration */}
+            <div className="flex-1 flex items-center justify-center">
+              <div 
+                className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-md"
+                style={{ transform: 'rotate(5deg)' }}
+              >
+                <div className="space-y-6">
+                  {/* Message 1 */}
+                  <div className="bg-gray-100 rounded-xl p-4">
+                    <p className="text-sm text-gray-800 mb-2">
+                      Ты всегда такая глупая, никогда ничего не понимаешь
+                    </p>
+                    <span className="inline-block bg-[#FF5C7A] text-white text-xs px-3 py-1 rounded-full">
+                      Оскорбления
+                    </span>
+                  </div>
+
+                  {/* Message 2 */}
+                  <div className="bg-gray-100 rounded-xl p-4">
+                    <p className="text-sm text-gray-800 mb-2">
+                      Почему ты не ответила сразу? С кем ты там?
+                    </p>
+                    <span className="inline-block bg-[#FF5C7A] text-white text-xs px-3 py-1 rounded-full">
+                      Контроль
+                    </span>
+                  </div>
+
+                  {/* Message 3 */}
+                  <div className="bg-gray-100 rounded-xl p-4">
+                    <p className="text-sm text-gray-800 mb-2">
+                      Никто тебя не полюбит так, как я
+                    </p>
+                    <span className="inline-block bg-[#FF5C7A] text-white text-xs px-3 py-1 rounded-full">
+                      Манипуляция
+                    </span>
+                  </div>
+
+                  {/* Message 4 */}
+                  <div className="bg-gray-100 rounded-xl p-4">
+                    <p className="text-sm text-gray-800 mb-2">
+                      Это всё из-за тебя, ты меня довела
+                    </p>
+                    <span className="inline-block bg-[#FF5C7A] text-white text-xs px-3 py-1 rounded-full">
+                      Обвинения
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
