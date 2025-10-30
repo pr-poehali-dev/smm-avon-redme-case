@@ -274,37 +274,95 @@ const Index = () => {
             visibleCards.includes(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl font-bold mb-8">О спецпроекте</h2>
-          
-          <Card className="p-10 bg-white border-0 rounded-3xl shadow-lg">
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-bold">
-                  1
+          <Card className="p-16 bg-white border-0 rounded-3xl shadow-lg h-[1296px]">
+            <h2 className="text-5xl font-bold mb-12">О спецпроекте</h2>
+            
+            <div className="flex gap-12 h-[calc(100%-6rem)]">
+              {/* Left side: Info cards */}
+              <div className="flex-1 space-y-8">
+                <div className="p-8 bg-white border-2 border-[#E6EAF1] rounded-2xl">
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Лендинг</p>
+                  <p className="text-xl leading-relaxed text-foreground">
+                    Avon c RedMe и психологами разработали лендинг «Азбука Абьюза» с информацией, рекомендациями и тестами.
+                  </p>
                 </div>
-                <div>
-                  <Badge className="mb-3 bg-secondary text-secondary-foreground">Лендинг</Badge>
-                  <p className="text-lg leading-relaxed">
-                    Avon c RedMe и психологами разработали лендинг «Азбука Абьюза» с информацией, рекомендациями и тестами
+
+                <div className="p-8 bg-white border-2 border-[#E6EAF1] rounded-2xl">
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Видеоконтент</p>
+                  <p className="text-xl leading-relaxed text-foreground">
+                    Для сайта и социальных сетей создали видеоролики про скрытые формы насилия «Перевод с абьюзерского».
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent text-accent-foreground flex items-center justify-center flex-shrink-0 font-bold">
-                  2
-                </div>
-                <div>
-                  <Badge className="mb-3 bg-secondary text-secondary-foreground">Видеоконтент</Badge>
-                  <p className="text-lg leading-relaxed">
-                    Для сайта и социальных сетей создали видеоролики про скрытые формы насилия «Перевод с абьюзерского»
-                  </p>
+              {/* Right side: Landing mockup */}
+              <div className="flex-1 flex items-center justify-center">
+                <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md border-2 border-[#E6EAF1]">
+                  {/* Header */}
+                  <div className="bg-[#EFF2F8] rounded-xl p-4 mb-6">
+                    <h3 className="text-2xl font-bold text-center">Азбука Абьюза</h3>
+                  </div>
+
+                  {/* Test cards */}
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-[#F8F9FB] rounded-xl p-5 border border-gray-200">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-8 h-8 bg-[#5B6CFF] text-white rounded-full flex items-center justify-center font-bold text-sm">
+                          A
+                        </div>
+                        <p className="font-semibold">Тест на абьюз</p>
+                      </div>
+                      <div className="space-y-2 ml-11">
+                        <label className="flex items-center gap-2 text-sm">
+                          <input type="checkbox" className="w-4 h-4" checked readOnly />
+                          <span>Контроль действий</span>
+                        </label>
+                        <label className="flex items-center gap-2 text-sm">
+                          <input type="checkbox" className="w-4 h-4" />
+                          <span>Изоляция от близких</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div className="bg-[#F8F9FB] rounded-xl p-5 border border-gray-200">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-8 h-8 bg-[#5B6CFF] text-white rounded-full flex items-center justify-center font-bold text-sm">
+                          B
+                        </div>
+                        <p className="font-semibold">Признаки насилия</p>
+                      </div>
+                      <div className="space-y-2 ml-11">
+                        <label className="flex items-center gap-2 text-sm">
+                          <input type="checkbox" className="w-4 h-4" />
+                          <span>Угрозы и шантаж</span>
+                        </label>
+                        <label className="flex items-center gap-2 text-sm">
+                          <input type="checkbox" className="w-4 h-4" checked readOnly />
+                          <span>Эмоциональное давление</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <button className="w-full bg-[#5B6CFF] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#4a5bd4] transition-colors">
+                    Пройти тест
+                  </button>
                 </div>
               </div>
             </div>
+          </Card>
+        </div>
 
-            <div className="mt-10 pt-10 border-t border-border">
-              <h3 className="text-xl font-semibold mb-6">A/B тестирование креативов</h3>
+        {/* Card 5: A/B Testing */}
+        <div
+          ref={(el) => (cardRefs.current[4] = el)}
+          className={`transition-all duration-700 delay-400 ${
+            visibleCards.includes(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <Card className="p-16 bg-white border-0 rounded-3xl shadow-lg h-[1296px]">
+            <h2 className="text-5xl font-bold mb-12">A/B тестирование креативов</h2>
               
               <div className="flex gap-4 mb-6">
                 <button
@@ -378,15 +436,14 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </Card>
         </div>
 
-        {/* Card 5: Solution & Metrics */}
+        {/* Card 6: Solution & Metrics */}
         <div
-          ref={(el) => (cardRefs.current[4] = el)}
-          className={`transition-all duration-700 delay-400 ${
-            visibleCards.includes(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          ref={(el) => (cardRefs.current[5] = el)}
+          className={`transition-all duration-700 delay-500 ${
+            visibleCards.includes(5) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <h2 className="text-4xl font-bold mb-8">Решение</h2>
