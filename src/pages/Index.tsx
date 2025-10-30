@@ -84,26 +84,80 @@ const Index = () => {
           }`}
         >
           <Card className="p-12 bg-gradient-to-br from-white to-secondary/50 border-0 shadow-2xl rounded-3xl overflow-hidden relative">
-            <Badge className="mb-6 bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold tracking-wide">
-              SMM CASE
-            </Badge>
-            
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-3xl">
-              Как тесты креативов помогли Avon и RedMe оценить актуальность социального проекта против абьюзивных отношений
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Кейс тестирования креативов для социального проекта
-            </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="z-10">
+                <Badge className="mb-6 bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold tracking-wide">
+                  SMM CASE
+                </Badge>
+                
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                  Как тесты креативов помогли Avon и RedMe оценить актуальность социального проекта против абьюзивных отношений
+                </h1>
+                
+                <p className="text-lg text-muted-foreground mb-8">
+                  Кейс тестирования креативов для социального проекта
+                </p>
 
-            <div className="flex items-center gap-4 opacity-80">
-              <span className="text-lg font-semibold">Avon</span>
-              <span className="w-2 h-2 rounded-full bg-foreground/30"></span>
-              <span className="text-lg font-semibold">RedMe</span>
-            </div>
+                <div className="flex items-center gap-4 opacity-80">
+                  <span className="text-lg font-semibold">Avon</span>
+                  <span className="w-2 h-2 rounded-full bg-foreground/30"></span>
+                  <span className="text-lg font-semibold">RedMe</span>
+                </div>
+              </div>
 
-            <div className="absolute right-8 bottom-8 opacity-10">
-              <Icon name="TrendingUp" size={200} />
+              <div className="relative h-[400px] hidden md:block">
+                <div className="absolute inset-0 flex gap-4 items-center justify-center" style={{ transform: 'skewY(-3deg)' }}>
+                  <div className="w-40 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] p-4 transform hover:scale-105 transition-transform">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl mb-3 flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                      <Icon name="Play" size={40} className="text-primary z-10" />
+                      <div className="absolute bottom-2 left-2 right-2">
+                        <div className="h-1 bg-white/30 rounded-full overflow-hidden">
+                          <div className="h-full bg-primary w-2/3 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <Icon name="Heart" size={16} className="text-accent" />
+                        <span className="text-sm font-semibold">42%</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Share2" size={16} className="text-primary" />
+                        <span className="text-sm font-semibold">18%</span>
+                      </div>
+                    </div>
+                    <div className="mt-2 pt-2 border-t border-border">
+                      <Badge className="text-xs bg-primary/10 text-primary">Вариант A</Badge>
+                    </div>
+                  </div>
+
+                  <div className="w-40 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] p-4 transform hover:scale-105 transition-transform mt-8">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl mb-3 flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent"></div>
+                      <Icon name="Play" size={40} className="text-accent z-10" />
+                      <div className="absolute bottom-2 left-2 right-2">
+                        <div className="h-1 bg-white/30 rounded-full overflow-hidden">
+                          <div className="h-full bg-accent w-1/2 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <Icon name="Heart" size={16} className="text-accent" />
+                        <span className="text-sm font-semibold">38%</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Share2" size={16} className="text-primary" />
+                        <span className="text-sm font-semibold">12%</span>
+                      </div>
+                    </div>
+                    <div className="mt-2 pt-2 border-t border-border">
+                      <Badge className="text-xs bg-accent/10 text-accent">Вариант B</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
         </div>
