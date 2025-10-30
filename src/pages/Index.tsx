@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeVariant, setActiveVariant] = useState<'A' | 'B'>('A');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -207,6 +208,83 @@ const Index = () => {
                   <p className="text-lg leading-relaxed">
                     Для сайта и социальных сетей создали видеоролики про скрытые формы насилия «Перевод с абьюзерского»
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 pt-10 border-t border-border">
+              <h3 className="text-xl font-semibold mb-6">A/B тестирование креативов</h3>
+              
+              <div className="flex gap-4 mb-6">
+                <button
+                  onClick={() => setActiveVariant('A')}
+                  className={`flex-1 py-4 px-6 rounded-xl font-semibold transition-all ${
+                    activeVariant === 'A'
+                      ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  Вариант A
+                </button>
+                <button
+                  onClick={() => setActiveVariant('B')}
+                  className={`flex-1 py-4 px-6 rounded-xl font-semibold transition-all ${
+                    activeVariant === 'B'
+                      ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                >
+                  Вариант B
+                </button>
+              </div>
+
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary/50 to-muted/50 p-8">
+                <div
+                  className={`transition-all duration-500 ${
+                    activeVariant === 'A' ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 absolute'
+                  }`}
+                >
+                  <div className="aspect-video bg-white rounded-xl shadow-lg flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <Icon name="Play" size={64} className="mx-auto mb-4 text-primary" />
+                      <h4 className="text-2xl font-bold mb-2">«Это не любовь»</h4>
+                      <p className="text-muted-foreground">Эмоциональный подход</p>
+                      <div className="mt-6 flex justify-center gap-8">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-primary">42%</div>
+                          <div className="text-sm text-muted-foreground">вовлечение</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-accent">18%</div>
+                          <div className="text-sm text-muted-foreground">шеры</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className={`transition-all duration-500 ${
+                    activeVariant === 'B' ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 absolute'
+                  }`}
+                >
+                  <div className="aspect-video bg-white rounded-xl shadow-lg flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <Icon name="Play" size={64} className="mx-auto mb-4 text-accent" />
+                      <h4 className="text-2xl font-bold mb-2">«Признаки абьюза»</h4>
+                      <p className="text-muted-foreground">Образовательный подход</p>
+                      <div className="mt-6 flex justify-center gap-8">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-primary">38%</div>
+                          <div className="text-sm text-muted-foreground">вовлечение</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-accent">12%</div>
+                          <div className="text-sm text-muted-foreground">шеры</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
