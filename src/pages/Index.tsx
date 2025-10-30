@@ -73,8 +73,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-secondary via-background to-secondary">
-      <div className="max-w-[540px] mx-auto px-6 py-12 space-y-16">
+    <div className="min-h-screen bg-gradient-to-b from-secondary via-background to-secondary flex items-center justify-center py-8">
+      <div className="w-[1080px] space-y-8">
         
         {/* Card 1: Cover */}
         <div
@@ -83,70 +83,70 @@ const Index = () => {
             visibleCards.includes(0) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <Card className="p-8 bg-gradient-to-b from-white to-secondary/50 border-0 shadow-2xl rounded-3xl overflow-hidden relative aspect-[3/4]">
-            <Badge className="mb-4 bg-primary text-primary-foreground px-3 py-1.5 text-xs font-semibold tracking-wide">
+          <Card className="p-16 bg-gradient-to-b from-white to-secondary/50 border-0 shadow-2xl rounded-3xl overflow-hidden relative h-[1296px]">
+            <Badge className="mb-8 bg-primary text-primary-foreground px-5 py-2 text-base font-semibold tracking-wide">
               SMM CASE
             </Badge>
             
-            <h1 className="text-2xl font-bold leading-tight mb-4">
+            <h1 className="text-5xl font-bold leading-tight mb-8 max-w-3xl">
               Как тесты креативов помогли Avon и RedMe оценить актуальность социального проекта против абьюзивных отношений
             </h1>
             
-            <p className="text-sm text-muted-foreground mb-6">
+            <p className="text-xl text-muted-foreground mb-16">
               Кейс тестирования креативов для социального проекта
             </p>
 
-            <div className="relative mt-auto">
-              <div className="flex gap-3 mb-6" style={{ transform: 'skewY(-2deg)' }}>
-                <div className="flex-1 bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.1)] p-3 transform hover:scale-105 transition-transform">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-2 flex items-center justify-center relative overflow-hidden">
-                    <Icon name="Play" size={28} className="text-primary z-10" />
-                    <div className="absolute bottom-1.5 left-1.5 right-1.5">
-                      <div className="h-0.5 bg-white/30 rounded-full overflow-hidden">
+            <div className="absolute bottom-16 left-16 right-16">
+              <div className="flex gap-6 mb-8" style={{ transform: 'skewY(-3deg)' }}>
+                <div className="flex-1 bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] p-6 transform hover:scale-105 transition-transform">
+                  <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <Icon name="Play" size={56} className="text-primary z-10" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <div className="h-1.5 bg-white/30 rounded-full overflow-hidden">
                         <div className="h-full bg-primary w-2/3 rounded-full"></div>
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-1 text-xs">
-                    <div className="flex items-center gap-1.5">
-                      <Icon name="Heart" size={12} className="text-accent" />
-                      <span className="font-semibold">42%</span>
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <Icon name="Heart" size={20} className="text-accent" />
+                      <span className="font-semibold text-lg">42%</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <Icon name="Share2" size={12} className="text-primary" />
-                      <span className="font-semibold">18%</span>
+                    <div className="flex items-center gap-2.5">
+                      <Icon name="Share2" size={20} className="text-primary" />
+                      <span className="font-semibold text-lg">18%</span>
                     </div>
                   </div>
-                  <Badge className="text-[10px] mt-1.5 bg-primary/10 text-primary px-2 py-0.5">A</Badge>
+                  <Badge className="text-sm mt-3 bg-primary/10 text-primary px-3 py-1">Вариант A</Badge>
                 </div>
 
-                <div className="flex-1 bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.1)] p-3 transform hover:scale-105 transition-transform">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-2 flex items-center justify-center relative overflow-hidden">
-                    <Icon name="Play" size={28} className="text-accent z-10" />
-                    <div className="absolute bottom-1.5 left-1.5 right-1.5">
-                      <div className="h-0.5 bg-white/30 rounded-full overflow-hidden">
+                <div className="flex-1 bg-white rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.12)] p-6 transform hover:scale-105 transition-transform">
+                  <div className="aspect-[3/4] bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <Icon name="Play" size={56} className="text-accent z-10" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <div className="h-1.5 bg-white/30 rounded-full overflow-hidden">
                         <div className="h-full bg-accent w-1/2 rounded-full"></div>
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-1 text-xs">
-                    <div className="flex items-center gap-1.5">
-                      <Icon name="Heart" size={12} className="text-accent" />
-                      <span className="font-semibold">38%</span>
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <Icon name="Heart" size={20} className="text-accent" />
+                      <span className="font-semibold text-lg">38%</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <Icon name="Share2" size={12} className="text-primary" />
-                      <span className="font-semibold">12%</span>
+                    <div className="flex items-center gap-2.5">
+                      <Icon name="Share2" size={20} className="text-primary" />
+                      <span className="font-semibold text-lg">12%</span>
                     </div>
                   </div>
-                  <Badge className="text-[10px] mt-1.5 bg-accent/10 text-accent px-2 py-0.5">B</Badge>
+                  <Badge className="text-sm mt-3 bg-accent/10 text-accent px-3 py-1">Вариант B</Badge>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 opacity-80">
-                <span className="text-sm font-semibold">Avon</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-foreground/30"></span>
-                <span className="text-sm font-semibold">RedMe</span>
+              <div className="flex items-center gap-4 opacity-80">
+                <span className="text-xl font-semibold">Avon</span>
+                <span className="w-2 h-2 rounded-full bg-foreground/30"></span>
+                <span className="text-xl font-semibold">RedMe</span>
               </div>
             </div>
           </Card>
@@ -159,29 +159,29 @@ const Index = () => {
             visibleCards.includes(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl font-bold mb-8">Кто участники проекта</h2>
-          
-          <Card className="p-10 bg-secondary/80 border-0 rounded-3xl backdrop-blur-sm">
-            <div className="grid md:grid-cols-2 gap-8 divide-x divide-border">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Sparkles" size={24} className="text-primary" />
+          <Card className="p-16 bg-secondary/80 border-0 rounded-3xl backdrop-blur-sm h-[1296px] flex flex-col">
+            <h2 className="text-5xl font-bold mb-12">Кто участники проекта</h2>
+            
+            <div className="flex-1 flex flex-col gap-12">
+              <div className="flex items-start gap-6 bg-white/50 p-8 rounded-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Sparkles" size={32} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-xl mb-2">Avon</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="font-semibold text-3xl mb-4">Avon</h3>
+                  <p className="text-muted-foreground leading-relaxed text-xl">
                     Производитель средств для ухода за кожей, парфюмерии и декоративной косметики
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 md:pl-8">
-                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Target" size={24} className="text-accent" />
+              <div className="flex items-start gap-6 bg-white/50 p-8 rounded-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Target" size={32} className="text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-xl mb-2">RedMe</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="font-semibold text-3xl mb-4">RedMe</h3>
+                  <p className="text-muted-foreground leading-relaxed text-xl">
                     Агентство социально ориентированного маркетинга
                   </p>
                 </div>
@@ -197,21 +197,17 @@ const Index = () => {
             visibleCards.includes(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Задача</h2>
-              <Card className="p-8 bg-white border-0 rounded-3xl shadow-lg h-full">
-                <p className="text-lg leading-relaxed text-foreground">
-                  Во время пандемии обострилась проблема домашнего насилия. Команда Avon решила рассказать женщинам о признаках абьюза, научить распознавать его на ранних стадиях отношений и реагировать на его проявления.
-                </p>
-              </Card>
-            </div>
+          <Card className="p-16 bg-white border-0 rounded-3xl shadow-lg h-[1296px] flex flex-col">
+            <h2 className="text-5xl font-bold mb-12">Задача</h2>
+            <p className="text-2xl leading-relaxed text-foreground mb-16">
+              Во время пандемии обострилась проблема домашнего насилия. Команда Avon решила рассказать женщинам о признаках абьюза, научить распознавать его на ранних стадиях отношений и реагировать на его проявления.
+            </p>
 
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Период</h2>
-              <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-3xl h-full flex items-center justify-center">
+            <div className="mt-auto">
+              <h2 className="text-5xl font-bold mb-8">Период</h2>
+              <div className="p-12 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 rounded-3xl">
                 <div className="text-center">
-                  <Icon name="Calendar" size={48} className="mx-auto mb-4 text-primary" />
+                  <Icon name="Calendar" size={64} className="mx-auto mb-6 text-primary" />
                   <p className="text-2xl font-semibold">25 ноября — 10 декабря</p>
                   <p className="text-lg text-muted-foreground mt-2">2021 года</p>
                 </div>
